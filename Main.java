@@ -67,18 +67,18 @@ static class MyRunnableClassTwo implements Runnable {
     @Override
     public void run() {
         float[] arr = new float [SIZE];
-        float[] arrHalf = new float [HALF];
+        float[] arrHalfTwo = new float [HALF];
 
-        System.arraycopy(arr,arr.length/2,arrHalf,0, arr.length/2);
-        for (int i = 0; i < arrHalf.length; i++) {
+        System.arraycopy(arr,arr.length/2,arrHalfTwo,0, arr.length/2);
+        for (int i = 0; i < arrHalfTwo.length; i++) {
             arr[i]=1;
         }
 
-        for (int j = 0; j < arrHalf.length;j++) {
+        for (int j = 0; j < arrHalfTwo.length;j++) {
             arr[j] = (float)(arr[j] * Math.sin(0.2f + j / 5) * Math.cos(0.2f + j / 5) * Math.cos(0.4f + j / 2));
         }
 
-        System.arraycopy(arrHalf,0,arr,arrHalf.length/2+1, arrHalf.length);
+        System.arraycopy(arrHalfTwo,0,arr,arrHalfTwo.length/2+1, arrHalfTwo.length);
     }
 }
     }
